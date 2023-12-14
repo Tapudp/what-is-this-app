@@ -1,4 +1,42 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Next.js LLaVA Video Analysis App
+
+This application integrates with the LLaVA video model to provide real-time analysis of live video streams. Users can record a video, submit it for analysis, and receive product descriptions from the LLaVA model.
+
+## Table of Contents
+
+- [Folder Structure](#folder-structure)
+- [Setup Guide](#setup-guide)
+  - [Environment Variables](#environment-variables)
+  - [Install Dependencies](#install-dependencies)
+  - [Run the Application](#run-the-application)
+
+## Folder Structure
+
+- **api**: Contains API route controllers.
+- **components**: React components used in the frontend.
+- **constants**: Store constants used throughout the application.
+- **containers**: Page-level components or container components.
+- **controllers**: API route controllers for server-side logic.
+- **services**: Modules with business logic and API service code.
+- **utils**: Utility and middleware modules.
+
+## Setup Guide
+
+### Environment Variables
+
+Create a `.env.local` file in the root directory and add the following environment variables:
+
+```env
+# Replace the placeholder with your actual LLaVA model ID
+REPLICATE_API_TOKEN=replicate_api_token
+LLAVA_MODEL_ID=your_llava_model_id
+```
+
+## Install Dependencies
+
+```
+npm install
+```
 
 ## Getting Started
 
@@ -16,21 +54,10 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## Usage
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- Open the application in your browser.
+- Record a video using the camera component.
+- Click the "Capture and Send" button to submit the recorded video for analysis.
+- View the product descriptions provided by the LLaVA model.
+- Feel free to explore and customize the components, services, and controllers based on your requirements.
